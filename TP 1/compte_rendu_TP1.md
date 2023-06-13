@@ -520,5 +520,4 @@ On modifie le fichier "/etc/hosts":
 
 ![hosts](./img/hosts.png)
 
-On déplace la page clonée et le contenu associé dans le bon répertoire apache.
-
+L'exercice a été validé par le chargé de TP.
