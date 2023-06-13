@@ -1,5 +1,5 @@
 # Cybersécurité - TP 1
-## GIBOZ Alexandre, MAURICE Romain
+## GIBOZ Alexandre, MAURICE Romain, AINOUZ Nicolas
 ## INFO1 2022-2025
 ***
 
@@ -485,6 +485,40 @@ On récupère bien le contenu du fichier "toto.txt" à l'identique:
 ## Exercice 5 : Certificats - Projet
 
 Dans ce projet, vous allez générer un fake serveur d'amazon sécurisé. Un fake certificat est nécessaire
-pour le fakes erveur. Ce fake certificat sera signé par un fake CA.
+pour le fake serveur. Ce fake certificat sera signé par un fake CA.
 
-1. **Réaliser un fake serveur d'amazon en suivant les étapes indiquées dans le fichier fakeServeurSSL-TLS**
+![certifcate_setup](./img/certificat.png)
+
+![certificate_expiration](./img/certificat_expiration.png)
+
+On modifie le fichier de configuration "sites-available":
+
+![apache](./img/apache.png)
+
+On modifier le fichier de configuration "default-ssl.conf":
+
+![apache2](./img/apache2.png)
+
+On déplace nos certificats dans les bons répertoires
+
+![mov](./img/mov.png)
+
+On importe le certificat dans le navigateur web de la machine
+
+![import1](./img/import1.png)
+
+On lance les commandes suivantes en tant que super user:
+```bash
+a2enmod ssl
+a2enmod headers
+a2ensite default-ssl
+apache2ctl configtest
+systemctl restart apache2
+```
+
+On modifie le fichier "/etc/hosts":
+
+![hosts](./img/hosts.png)
+
+On déplace la page clonée et le contenu associé dans le bon répertoire apache.
+
