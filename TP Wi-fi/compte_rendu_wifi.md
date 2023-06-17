@@ -1,5 +1,5 @@
 # Wi-fi - TP
-## GIBOZ Alexandre, MAURICE Romain
+## GIBOZ Alexandre, MAURICE Romain, AINOUZ Nicolas
 ## INFO1 2022-2025
 ***
 
